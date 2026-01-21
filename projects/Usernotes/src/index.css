@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@keyframes scroll-x {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+   transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.animate-scroll-x {
+  animation: scroll-x 8s linear infinite;
+}
+.seat {
+  @apply w-[60px] h-[60px]  text-white rounded flex items-center justify-center 
+         font-semibold shadow cursor-pointer transition;
+}
+
+
+
+
